@@ -12,7 +12,7 @@ public class ${{values.component_id}}ResourceTest {
     @Test
     public void testHelloEndpoint() {
         given()
-                .when().get("/hello")
+                .when().get("${{values.api_endpoint}}")
                 .then()
                 .statusCode(200)
                 .body(is("Hello from RESTEasy Reactive"));
