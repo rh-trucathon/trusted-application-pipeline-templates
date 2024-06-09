@@ -1,9 +1,12 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: project-dance-templates
-  description: A collection of RHDH templates for Project Dance
+  name: super-heroes-templates
+  description: A collection of RHDH templates for the Quarkus Super Heroes Workshop
 spec:
   type: url
   targets:
-     - https://gitlab-gitlab.apps.cluster-4tqns.sandbox1361.opentlc.com/rhdh/trusted-application-pipeline-templates/blob/main/scaffolder-templates/quarkus-stssc-template/template.yaml
+     - https://github.com/rh-trucathon/trusted-application-pipeline-templates/blob/main/scaffolder-templates/quarkus-reactive-postgresql-template/template.yaml
+     - https://github.com/rh-trucathon/trusted-application-pipeline-templates/blob/main/scaffolder-templates/quarkus-reactive-template/template.yaml
+     - https://github.com/rh-trucathon/trusted-application-pipeline-templates/blob/main/scaffolder-templates/quarkus-rest-postgresql-template/template.yaml
+#     - https://github.com/rh-trucathon/trusted-application-pipeline-templates/blob/main/scaffolder-templates/quarkus-stssc-template/template.yaml
