@@ -17,6 +17,7 @@ spec:
       required:
         - component_id
         - java_package_name
+        - api_endpoint
       properties:
         component_id:
           title: Name
@@ -40,6 +41,11 @@ spec:
           default: org.redhat.janus
           type: string
           description: Name for the java package. eg (com.redhat.blah)
+        api_endpoint:
+          title: API Endpoint
+          default: /hello
+          type: string
+          description: Path of the first API Endpoint
         description:
           title: Description
           type: string
