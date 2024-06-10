@@ -6,7 +6,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("${{values.api_endpoint}}")
-public class ExampleResource {
+public class ${{values.component_id}}Resource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
