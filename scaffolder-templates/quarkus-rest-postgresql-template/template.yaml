@@ -20,7 +20,6 @@ spec:
         - api_endpoint
         - system
         - group_id
-        - component_id
         - artifact_id
         - java_package_name
       properties:
@@ -28,7 +27,7 @@ spec:
           title: Name
           type: string
           description: Unique name of the component
-          default: my-quarkus-app
+#          default: my-quarkus-app
           ui:field: EntityNamePicker
           maxLength: 23
         group_id:
