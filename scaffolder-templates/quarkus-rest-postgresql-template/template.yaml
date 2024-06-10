@@ -21,7 +21,6 @@ spec:
         - system
         - group_id
         - artifact_id
-        - java_package_name
       properties:
         component_id:
           title: Name
