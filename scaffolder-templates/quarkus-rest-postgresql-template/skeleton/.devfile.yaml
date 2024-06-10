@@ -6,11 +6,22 @@ components:
     container:
       image: quay.io/devfile/universal-developer-image:ubi8-277c10c
       env:
+        - name: USE_JAVA17
+          value: "true"
+        - name: KUBEDOCK_ENABLED
+          value: "true"
+        - name: DOCKER_HOST
+          value: "tcp://127.0.0.1:2475"
+        - name: TESTCONTAINERS_RYUK_DISABLED
+          value: "true"
+#         - name: KUBEDOCK_PARAMS
+# #          value: "--reverse-proxy --kubeconfig /home/user/.kube/config --initimage quay.io/agiertli/kubedock:0.13.0"
+#           value: "--reverse-proxy"
         - name: QUARKUS_HTTP_HOST
           value: 0.0.0.0
         - name: MAVEN_OPTS
           value: "-Dmaven.repo.local=/home/user/.m2/repository"
-      memoryLimit: 5Gi
+      memoryLimit: 4Gi
       cpuLimit: 2500m
       volumeMounts:
         - name: m2
