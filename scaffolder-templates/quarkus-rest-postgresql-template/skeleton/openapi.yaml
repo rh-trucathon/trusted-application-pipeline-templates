@@ -9,7 +9,7 @@ servers:
 - url: http://0.0.0.0:8080
   description: Auto generated value
 paths:
-  /hello:
+  ${{values.api_endpoint}}:
     get:
       tags:
       - Example Resource
