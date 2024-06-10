@@ -47,15 +47,15 @@ spec:
           default: /hello
           type: string
           description: Path of the first API Endpoint
+        system:
+          title: System Application
+          type: string
+          description: Name of the "System" application (which contains all the services)
         description:
           title: Description
           type: string
           description: Help others understand what this website is for.
           default: A cool quarkus app
-        system:
-          title: System Application
-          type: string
-          description: Name of the "System" application (which contains all the services)
     - title: Provide Image Registry Information
       required:
         - image_registry
@@ -155,8 +155,8 @@ spec:
           quay_destination: ${{ parameters.image_organization}}/${{ parameters.component_id }}
           port: 8080
           verify_commits: ${{ parameters.repo.verify_commits }}
-          api_endpoint: ${{parameters.api_endpoint }}
-          system: ${ parameters.system }}
+          api_endpoint: ${{ parameters.api_endpoint }}
+          system: ${{ parameters.system }}
 
     - id: publish
       name: Publish
