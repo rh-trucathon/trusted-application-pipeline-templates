@@ -193,15 +193,15 @@ spec:
           verify_commits: ${{ parameters.repo.verify_commits }}
         targetPath: ./tenant-gitops
 
-    # - id: publish-gitops
-    #   name: Publishing to Resource Repository
-    #   action: publish:gitlab
-    #   input:
-    #     repoUrl: "${{ parameters.repo.host }}?owner=${{ parameters.repo.owner }}&repo=${{parameters.component_id}}-gitops"
-    #     title: gitops resources for ${{ parameters.component_id }}
-    #     description: gitops resources for ${{ parameters.component_id }}
-    #     sourcePath: ./tenant-gitops
-    #     repoVisibility: public
+    - id: publish-gitops
+      name: Publishing to Resource Repository
+      action: publish:gitlab
+      input:
+        repoUrl: "${{ parameters.repo.host }}?owner=${{ parameters.repo.owner }}&repo=${{parameters.component_id}}-gitops"
+        title: gitops resources for ${{ parameters.component_id }}
+        description: gitops resources for ${{ parameters.component_id }}
+        sourcePath: ./tenant-gitops
+        repoVisibility: public
 
     # - id: create-argocd-resources
     #   name: Create ArgoCD Resources
