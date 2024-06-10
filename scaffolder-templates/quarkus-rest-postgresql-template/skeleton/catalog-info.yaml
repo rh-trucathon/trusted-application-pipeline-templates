@@ -1,4 +1,15 @@
 apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: ${{values.system}}
+  tags:
+    - java
+    - quarkus
+    - superheroes
+spec:
+  owner: ${{values.owner | dump}}
+---
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ${{values.component_id | dump}}
@@ -29,6 +40,7 @@ spec:
   owner: ${{values.owner | dump}}
   providesApis:
     - ${{values.component_id | dump}}
+  system: ${{values.system}}
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -43,3 +55,4 @@ spec:
   owner: ${{values.owner | dump}}
   definition:
     $text: ./openapi.yaml
+
