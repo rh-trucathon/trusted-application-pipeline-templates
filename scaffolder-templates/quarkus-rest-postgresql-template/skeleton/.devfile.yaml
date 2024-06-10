@@ -4,7 +4,8 @@ metadata:
 components:
   - name: development-tooling
     container:
-      image: quay.io/devfile/universal-developer-image:ubi8-277c10c
+#      image: quay.io/devfile/universal-developer-image:ubi8-277c10c
+      image: registry.redhat.io/devspaces/udi-rhel8:latest
       env:
         - name: USE_JAVA17
           value: "true"
@@ -36,7 +37,6 @@ components:
           exposure: public
           secure: false
           protocol: https
-          path: hello
         - name: debug
           targetPort: 5005
           exposure: none
